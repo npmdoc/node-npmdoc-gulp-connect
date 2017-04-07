@@ -1,11 +1,13 @@
-# api documentation for  [gulp-connect (v5.0.0)](https://github.com/avevlad/gulp-connect#readme)  [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-gulp-connect.svg)](https://travis-ci.org/npmdoc/node-npmdoc-gulp-connect)
+# api documentation for  [gulp-connect (v5.0.0)](https://github.com/avevlad/gulp-connect#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-gulp-connect.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-gulp-connect) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-gulp-connect.svg)](https://travis-ci.org/npmdoc/node-npmdoc-gulp-connect)
 #### Gulp plugin to run a webserver (with LiveReload)
 
 [![NPM](https://nodei.co/npm/gulp-connect.png?downloads=true)](https://www.npmjs.com/package/gulp-connect)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-gulp-connect/build/screen-capture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-gulp_connect_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-gulp-connect/build..beta..travis-ci.org/apidoc.html)
+[![apidoc](https://npmdoc.github.io/node-npmdoc-gulp-connect/build/screenCapture.buildNpmdoc.browser.%2Fhome%2Ftravis%2Fbuild%2Fnpmdoc%2Fnode-npmdoc-gulp-connect%2Ftmp%2Fbuild%2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-gulp-connect/build/apidoc.html)
 
-![package-listing](https://npmdoc.github.io/node-npmdoc-gulp-connect/build/screen-capture.npmPackageListing.svg)
+![npmPackageListing](https://npmdoc.github.io/node-npmdoc-gulp-connect/build/screenCapture.npmPackageListing.svg)
+
+![npmPackageDependencyTree](https://npmdoc.github.io/node-npmdoc-gulp-connect/build/screenCapture.npmPackageDependencyTree.svg)
 
 
 
