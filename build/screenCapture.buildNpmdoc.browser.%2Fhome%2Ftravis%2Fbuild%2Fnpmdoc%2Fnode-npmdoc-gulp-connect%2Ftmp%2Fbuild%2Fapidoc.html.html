@@ -1,0 +1,214 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/avevlad/gulp-connect#readme">gulp-connect (v5.0.0)</a>
+</h1>
+<h4>Gulp plugin to run a webserver (with LiveReload)</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gulp-connect">module gulp-connect</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-connect.reload">
+            function <span class="apidocSignatureSpan">gulp-connect.</span>reload
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-connect.server">
+            function <span class="apidocSignatureSpan">gulp-connect.</span>server
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-connect.serverClose">
+            function <span class="apidocSignatureSpan">gulp-connect.</span>serverClose
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gulp-connect" id="apidoc.module.gulp-connect">module gulp-connect</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-connect.reload" id="apidoc.element.gulp-connect.reload">
+        function <span class="apidocSignatureSpan">gulp-connect.</span>reload
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">reload = function () {
+  return es.map(function(file, callback) {
+    apps.forEach((function(_this) {
+      return function(app) {
+        if (app.livereload &amp;&amp; typeof app.lr === "object") {
+          return app.lr.changed({
+            body: {
+              files: file.path
+            }
+          });
+        }
+      };
+    })(this));
+    return callback(null, file);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    root: 'app',
+    livereload: true
+  });
+});
+
+gulp.task('html', function () {
+  gulp.src('./app/*.html')
+    .pipe(connect.<span class="apidocCodeKeywordSpan">reload</span>());
+});
+
+gulp.task('watch', function () {
+  gulp.watch(['./app/*.html'], ['html']);
+});
+
+gulp.task('default', ['connect', 'watch']);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-connect.server" id="apidoc.element.gulp-connect.server">
+        function <span class="apidocSignatureSpan">gulp-connect.</span>server
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">server = function (options) {
+  var app;
+  if (options == null) {
+    options = {};
+  }
+  app = new ConnectApp(options);
+  apps.push(app);
+  return app;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+## Usage
+
+```js
+var gulp = require('gulp'),
+  connect = require('gulp-connect');
+
+gulp.task('connect', function() {
+  connect.<span class="apidocCodeKeywordSpan">server</span>();
+});
+
+gulp.task('default', ['connect']);
+```
+
+#### LiveReload
+```js
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-connect.serverClose" id="apidoc.element.gulp-connect.serverClose">
+        function <span class="apidocSignatureSpan">gulp-connect.</span>serverClose
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">serverClose = function () {
+  apps.forEach(function(app) {
+    return app.server.close();
+  });
+  return apps = [];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```js
+gulp.task('jenkins-tests', function() {
+  connect.server({
+    port: 8888
+  });
+  // run some headless tests with phantomjs
+  // when process exits:
+  connect.<span class="apidocCodeKeywordSpan">serverClose</span>();
+});
+```
+
+
+#### Multiple server
+
+```js
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
