@@ -135,7 +135,7 @@
 <tspan x="10" y="2122">  │ ├── object-assign@3.0.0 </tspan>
 <tspan x="10" y="2138">  │ ├── replace-ext@0.0.1 </tspan>
 <tspan x="10" y="2154">  │ ├─┬ through2@2.0.3 </tspan>
-<tspan x="10" y="2170">  │ │ ├─┬ readable-stream@2.2.8 </tspan>
+<tspan x="10" y="2170">  │ │ ├─┬ readable-stream@2.2.9 </tspan>
 <tspan x="10" y="2186">  │ │ │ ├── buffer-shims@1.0.0 </tspan>
 <tspan x="10" y="2202">  │ │ │ ├── isarray@1.0.0 </tspan>
 <tspan x="10" y="2218">  │ │ │ ├── process-nextick-args@1.0.7 </tspan>
